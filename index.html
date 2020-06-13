@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Single Price Grid Component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,36 +15,115 @@
   </style>
 </head>
 <body>
-  Join our community
 
-  30-day, hassle-free money back guarantee
+  <div class="container">
+    <main>
+      <div class="box">
+        <div class="up-content">
+          <div class="upper-box">
+            <div id="upper-text">Join our community</div>
+            <div id="middle-text">30-day, hassle-free money back guarantee</div>
+            <div id="bottom-text">Gain access to our full library of tutorials along with expert code reviews.<br> 
+              Perfect for any developers who are serious about honing their skills.</div>
+          </div>
+        </div>
+        
+        <div class="left-content">
+          <div class="left-box">
+            <div>Monthly Subscription</div>
+            <div>&dollar;29 per month</div>
+            <div>Full access for less than &dollar;1 a day</div>
+            <div>Sign Up</div>
+          </div>
+        </div>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+        <div class="right-content">
+          <div class="right-box">
+            <b>Why Us</b><br><br>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+            Tutorials by industry experts
+            Peer &amp; expert code review
+            Coding exercises
+            Access to our GitHub repos
+            Community forum
+            Flashcard decks
+            New videos every week
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Isaías Lucena</a>.
+      </p>
+    </footer>
+  </div>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </body>
+<style>
+  html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: hsl(204, 43%, 93%);
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+  }
+  .container {
+    display: grid;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vh 60vh;
+    grid-template-areas: "up up"
+                        "left right";
+    height: 600px;
+    width: 600px;
+  }
+  .up-content {
+    grid-area: up;
+    background: white;
+    
+  }
+  
+  .upper-box {
+    width: fit-content;
+    margin: 40px;
+  }
+  .left-box {
+    width: fit-content;
+    margin: 40px;
+  }
+  .right-box {
+    width: fit-content;
+    margin: 60px 40px;
+  }
+  #upper-text {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  #middle-text {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  #bottom-text {
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+  }
+  .left-content {
+    grid-area: left;
+    background: hsl(179, 62%, 43%);
+    color: white;
+  }
+  .right-content {
+    grid-area: right;
+    background: #48D1CC;
+    color: white;
+  }
+  
+</style>
 </html>
